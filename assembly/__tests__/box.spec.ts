@@ -108,6 +108,20 @@ describe("Box", () => {
 
         expect(box + box2).toStrictEqual(Box.from("21"));
     });
+
+    it("subclass", () => {
+        let b1 = Box2.from(1);
+        let b2 = Box2.from(1);
+        expect(b1 == b2).toStrictEqual(True);
+        expect(b1 != b2).toStrictEqual(False);
+
+        let b3 = Box2.from(1);
+        let b4 = Box2.from(2);
+        expect(b3 == b4).toStrictEqual(True);
+        expect(b3 != b4).toStrictEqual(False);
+    });
 });
 
 class Person {}
+
+class Box2<T> extends Box<T> {}
