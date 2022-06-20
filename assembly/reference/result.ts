@@ -10,7 +10,7 @@ export type FlatMapErrFn<O, E, F> = MapFn<E, Result<O, F>>;
  * It is an enum with the variants, Ok(T), representing success and containing a value,
  * and Err(E), representing error and containing an error value.
  *
- * The Result version can only wrap reference type, but it will reduce reference overhead.
+ * This Result version can only wrap reference type, but it will reduce reference overhead.
  */
 export class Result<O, E> implements Resultable<O, E> {
     private constructor(
